@@ -1,0 +1,54 @@
+<mat-toolbar role="heading" >
+
+
+  <span>
+    <nav mat-tab-nav-bar>
+
+      <a mat-tab-link
+         (click)="activeLink = 'about'"
+         [active]="activeLink == 'about'"
+         routerLink="/cards/"
+         routerLinkActive="active"
+      >درباره ما</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'contact'"
+         [active]="activeLink == 'contact'"
+         routerLink="/cards/contact"
+      >تماس با ما</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'rules'"
+         [active]="activeLink == 'rules'"
+         routerLink="/cards/rules"
+      >قوانین</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'org'"
+         [active]="activeLink == 'org'"
+         routerLink="/cards/org-warranty"
+      >ضمانت اصل بودن</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'warranty'"
+         [active]="activeLink == 'warranty'"
+         routerLink="/cards/warranty"
+      >ضمانت</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'pay'"
+         [active]="activeLink == 'pay'"
+         routerLink="/cards/pay"
+      >پرداخت در محل</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'support'"
+         [active]="activeLink == 'support'"
+         routerLink="/cards/support"
+      >پشتیبانی</a>
+
+    </nav>
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>
+

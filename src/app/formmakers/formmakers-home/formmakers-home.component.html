@@ -1,0 +1,28 @@
+<mat-toolbar role="heading" >
+
+
+  <span>
+    <nav mat-tab-nav-bar>
+
+      <a mat-tab-link
+         (click)="activeLink = 'list'"
+         [active]="activeLink == 'list'"
+         routerLink="/formmakers/"
+         routerLinkActive="active"
+         style="text-decoration: none"
+      >لیست فرم ها</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'Insert'"
+         [active]="activeLink == 'Insert'"
+         routerLink="/formmakers/insert"
+         style="text-decoration: none"
+      >افزودن فرم</a>
+
+    </nav>
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+
+

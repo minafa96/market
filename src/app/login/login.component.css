@@ -1,0 +1,19 @@
+.login{
+  background-color: #80bfff;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  height:100%;
+  width:100%;
+}
+mat-card-title, button, mat-form-field {
+  font-family: iransans, serif;
+}
+
+mat-form-field {
+  display: block;
+  direction: rtl;
+  text-align: right;
+}

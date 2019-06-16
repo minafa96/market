@@ -1,0 +1,25 @@
+<div class="list">
+  <mat-form-field align="center" >
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="فیلتر">
+  </mat-form-field>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> نام </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="setting">
+      <th mat-header-cell *matHeaderCellDef> تنظیمات </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="warn" matTooltip="حذف" (click)="remove(element.name)"><i class="fa fa-trash"></i> </button>
+        <button mat-icon-button color="success" matTooltip="ویرایش" (click)="edit()"><i class="fa fa-edit"></i> </button>
+        <mat-slide-toggle matTooltip="تغییر وضعیت"></mat-slide-toggle>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+

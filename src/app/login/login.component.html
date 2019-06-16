@@ -1,0 +1,29 @@
+
+<!--<mat-toolbar>
+  <span>LOGIN</span>
+</mat-toolbar>
+-->
+<div class="login">
+<mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" fxFlex="40%" fxFlex.xs="100%"
+          style="margin: auto; margin-top: 200px"
+          class="mat-elevation-z10">
+  <br>
+  <mat-card-title>ورود به سیستم</mat-card-title>
+  <br>
+
+  <mat-card-content>
+    <form>
+      <mat-form-field >
+        <input  matInput  placeholder="نام کاربری" name="username">
+      </mat-form-field>
+      <mat-form-field>
+        <input  matInput  placeholder="کلمه عبور" name="password">
+      </mat-form-field>
+    </form>
+
+  </mat-card-content>
+  <mat-card-actions align="center">
+    <button mat-raised-button (click)="onLogin()" color="primary">ورود</button>
+  </mat-card-actions>
+</mat-card>
+</div>

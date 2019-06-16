@@ -1,0 +1,25 @@
+<mat-toolbar role="heading" >
+
+
+  <span>
+    <nav mat-tab-nav-bar>
+
+      <a mat-tab-link
+         (click)="activeLink = 'list'"
+         [active]="activeLink == 'list'"
+         routerLink="/send-ways/"
+         routerLinkActive="active"
+         style="text-decoration: none"
+      >روش های ارسال</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'insert'"
+         [active]="activeLink == 'insert'"
+         routerLink="/send-ways/insert"
+         style="text-decoration: none"
+      >افزودن روش ارسال</a>
+
+    </nav>
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>

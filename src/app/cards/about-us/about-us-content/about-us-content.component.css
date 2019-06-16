@@ -1,0 +1,11 @@
+.card {
+  max-width: 400px;
+  margin: auto;
+  font-family: iransans, serif;
+}
+button {
+  font-family: iransans, serif;
+}
+mat-card-content{
+  background: #f2f2f2;
+}

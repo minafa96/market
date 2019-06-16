@@ -1,0 +1,28 @@
+<mat-toolbar role="heading" >
+
+
+  <span>
+    <nav mat-tab-nav-bar>
+
+      <a mat-tab-link
+         (click)="activeLink = 'list'"
+         [active]="activeLink == 'list'"
+         routerLink="/banners/"
+         routerLinkActive="active"
+         style="text-decoration: none"
+      >لیست بنرها</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'Insert'"
+         [active]="activeLink == 'Insert'"
+         routerLink="/banners/insert"
+         style="text-decoration: none"
+      >افزودن بنر</a>
+
+    </nav>
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+
+

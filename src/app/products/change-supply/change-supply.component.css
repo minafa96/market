@@ -1,0 +1,21 @@
+mat-dialog-content,p {
+  font-family: iransans, serif;
+  direction: rtl;
+  text-align: right;
+}
+
+button{
+  font-family: iransans, serif;
+}
+
+.pBold {
+  font-family: iransansbold, serif;
+  direction: rtl;
+  text-align: center;
+}
+
+mat-form-field,input,form {
+  font-family: iransans, serif;
+  direction: rtl;
+  text-align: center;
+}

@@ -1,0 +1,83 @@
+
+<mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px"
+          fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="70%" style="margin: auto">
+  <br>
+  <br>
+  <mat-card-title>افزودن محصول</mat-card-title>
+  <br>
+  <form #f="ngForm">
+    <mat-card-content align="center">
+      <mat-form-field [color]="primary">
+        <input matInput placeholder="نام" ngModel name="title" #title="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="دسته بندی" ngModel name="part" #part="ngModel" required>
+          <mat-option *ngFor="let part of parts" [value]="part">{{part}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field [color]="primary">
+        <textarea matInput placeholder="توضیحات..." ngModel name="des" #des="ngModel" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
+      </mat-form-field>
+
+      <mat-form-field [color]="primary">
+        <input matInput placeholder="رنگ" ngModel name="color" #color="ngModel">
+      </mat-form-field>
+
+      <mat-form-field [color]="primary">
+        <input matInput placeholder="قیمت" ngModel name="price" #price="ngModel">
+      </mat-form-field>
+
+      <mat-form-field [color]="primary">
+        <input matInput placeholder="قیمت با تخفیف" ngModel name="disPrice" #disPrice="ngModel">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="گارانتی" ngModel name="warranty" #warranty="ngModel" required>
+          <mat-option *ngFor="let warranty of warranties" [value]="warranty">{{warranty}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="روش ارسال" ngModel name="sendWay" #sendWay="ngModel" required>
+          <mat-option *ngFor="let sendWay of sendWays" [value]="sendWay">{{sendWay}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field [color]="primary">
+        <input matInput placeholder="موجودی" ngModel name="supply" #supply="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-chip-list #chipList>
+          <mat-chip *ngFor="let keyword of keywords" [selectable]="selectable"
+                    [removable]="removable" (removed)="remove(keyword)">
+            {{keyword.name}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="کلمه کلیدی"
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+      </mat-form-field>
+
+      <mat-form-field [color]="primary">
+        <textarea matInput placeholder="توضیحات سئو" ngModel name="seoDes" #seoDes="ngModel" required
+                  cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
+      </mat-form-field>
+
+
+
+    </mat-card-content>
+    <mat-card-actions align="center">
+      <button mat-raised-button color="primary"
+              [disabled]="!f.valid"
+              (click)="onSubmit()">ثبت</button>
+      <button mat-raised-button color="accent"
+      (click)="onCancel()">انصراف</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

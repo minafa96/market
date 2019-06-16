@@ -1,0 +1,60 @@
+<mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px"
+          fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="70%" style="margin: auto">
+  <br>
+  <br>
+  <mat-card-title>افزودن سفارش</mat-card-title>
+  <br>
+  <form #f="ngForm" >
+    <mat-card-content align="center" fxLayout="column">
+
+      <mat-form-field>
+        <input matInput placeholder="شناسه مشتری" ngModel name="customerId" #cuId="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="شناسه محصول" ngModel name="productId" #proId="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="قیمت" ngModel name="price" #price="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="تخفیف" ngModel name="disPrice" #dPrice="ngModel">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="هزینه پست" ngModel name="postPrice" #pPrice="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="کد پستی" ngModel name="postCode" #pCode="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="ادرس" ngModel name="address" #address="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="وضعیت ارسال" ngModel name="sendStatus" #sendStat="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="روش ارسال"  name="sendWay" required>
+          <mat-option *ngFor="let sendWay of sendWays" [value]="sendWay">{{sendWay}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-actions align="center">
+      <button mat-stroked-button color="primary"
+              style="border: 1px solid blue; margin-right: 3px"
+              [disabled]="!f.valid"
+      >ثبت</button>
+      <button mat-stroked-button color="warn"
+              style="border: 1px solid red; margin-right: 3px"
+      >انصراف</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
+

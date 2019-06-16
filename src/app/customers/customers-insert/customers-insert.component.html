@@ -1,0 +1,76 @@
+
+<mat-card fxLayout="column" fxLayoutAlign="center center"
+          fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="70%" style="margin: auto">
+  <br>
+  <br>
+  <mat-card-title>افزودن مشتری</mat-card-title>
+  <br>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <mat-card-content>
+    <mat-form-field [color]="primary">
+      <input matInput placeholder="نام" ngModel name="firstName" #fName="ngModel" required>
+    </mat-form-field>
+
+    <mat-form-field [color]="primary">
+      <input matInput placeholder="نام خانوادگی" ngModel name="lastName" #lName="ngModel" required>
+    </mat-form-field>
+
+    <mat-form-field [color]="primary">
+      <input matInput placeholder="تلفن" ngModel name="phone" #phone="ngModel">
+    </mat-form-field>
+
+    <mat-form-field [color]="primary">
+      <input matInput placeholder="سن" ngModel name="age" #age="ngModel">
+    </mat-form-field>
+
+    <mat-form-field [color]="primary">
+      <input matInput placeholder="کد ملی" ngModel name="imei" #imei="ngModel" required>
+    </mat-form-field>
+
+    <mat-form-field [color]="primary">
+      <input matInput placeholder="کد پستی" name="postCode" ngModel #postCode="ngModel" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="کشور" [ngModel]="defaultCountry" name="country" #country="ngModel" required>
+        <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="استان" ngModel name="state" #state="ngModel" required>
+        <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="شهر" ngModel name="city" #city="ngModel" required>
+        <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field [color]="primary">
+      <input matInput placeholder="ایمیل" ngModel name="email" #email="ngModel" email>
+      <mat-error *ngIf="!email.valid">یک ایمیل معتبر وارد کنید( مانند :a@yahoo.com )</mat-error>
+    </mat-form-field>
+
+    <mat-form-field [color]="primary">
+      <input matInput placeholder="ادرس" ngModel name="address" #address="ngModel" required>
+    </mat-form-field>
+
+    <mat-form-field [color]="primary">
+      <input matInput placeholder="کلمه عبور" ngModel name="password" #pass="ngModel" required minlength="4" maxlength="12">
+      <mat-error *ngIf="!pass.valid && pass.touched">کلمه عبور باید دارای حداقل ۴ و حداکثر ۱۲ کاراکتر باشد</mat-error>
+    </mat-form-field>
+
+  </mat-card-content>
+  <mat-card-actions align="center">
+    <button mat-stroked-button color="primary"
+            style="border: 1px solid blue"
+            [disabled]="!f.valid"
+            matTooltip="لطفا مقدار خالی وارد نکنید" >ثبت</button>
+    <button mat-stroked-button color="warn"
+            style="border: 1px solid red; margin-right: 3px">انصراف</button>
+  </mat-card-actions>
+  </form>
+</mat-card>

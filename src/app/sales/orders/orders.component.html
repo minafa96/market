@@ -1,0 +1,25 @@
+<mat-toolbar role="heading" >
+
+
+  <span>
+    <nav mat-tab-nav-bar>
+
+      <a mat-tab-link
+         (click)="activeLink = 'list'"
+         [active]="activeLink == 'list'"
+         routerLink="/orders/"
+         routerLinkActive="active"
+         style="text-decoration: none"
+      >سفارشات</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'Insert'"
+         [active]="activeLink == 'Insert'"
+         routerLink="/orders/insert"
+         style="text-decoration: none"
+      >افزودن سفارش</a>
+
+    </nav>
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>

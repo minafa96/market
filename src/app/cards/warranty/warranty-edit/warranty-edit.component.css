@@ -1,0 +1,14 @@
+mat-form-field {
+  width: 300px;
+  font-family: iransans, serif;
+  display: block;
+}
+mat-card-title {
+  padding-left: 200px;
+}
+mat-card {
+  font-family: iransans, serif;
+}
+button {
+  font-family: iransans, serif;
+}

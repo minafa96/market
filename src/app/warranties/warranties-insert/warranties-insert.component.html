@@ -1,0 +1,29 @@
+<mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px"
+          fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="70%" style="margin: auto">
+  <br>
+  <br>
+  <mat-card-title>افزودن گارانتی</mat-card-title>
+  <br>
+  <form #f="ngForm" >
+    <mat-card-content align="center" fxLayout="column">
+
+      <mat-form-field>
+        <input matInput placeholder="نام" ngModel name="name" #name="ngModel" required>
+      </mat-form-field>
+
+
+    </mat-card-content>
+    <mat-card-actions align="center">
+      <button mat-stroked-button color="primary"
+              style="border: 1px solid blue"
+              [disabled]="!f.valid"
+      >ثبت</button>
+      <button mat-stroked-button color="warn"
+              style="border: 1px solid #FE4A08 ;color: #FE4A08; margin-right: 3px"
+              (click)="cancel()"
+      >انصراف</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
+
+

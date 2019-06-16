@@ -1,0 +1,26 @@
+<mat-toolbar role="heading" >
+
+
+  <span>
+    <nav mat-tab-nav-bar>
+
+      <a mat-tab-link
+         (click)="activeLink = 'list'"
+         [active]="activeLink == 'list'"
+         routerLink="/parts/"
+         routerLinkActive="active"
+         style="text-decoration: none"
+      >لیست دسته بندی ها</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'Insert'"
+         [active]="activeLink == 'Insert'"
+         routerLink="/parts/insert"
+         style="text-decoration: none"
+      >افزودن دسته</a>
+
+    </nav>
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>
+

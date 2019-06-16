@@ -1,0 +1,13 @@
+mat-dialog-content,p {
+  text-align: right;
+}
+
+mat-dialog-content,button,textarea {
+  font-family: iransans, serif;
+}
+mat-form-field {
+  font-family: iransans, serif;
+  width: 350px;
+  direction: rtl;
+  text-align: right;
+}

@@ -1,0 +1,17 @@
+<div mat-dialog-content>
+  <p>عنوان محصول : {{title}}</p>
+  <p> موجودی قبلی : {{supply}}</p>
+  <br>
+  <P class="pBold">موجودی جدید را وارد کنید:</P>
+  <br>
+  <form #f="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="موجودی جدید" [(ngModel)]="newSupply" name="newSupply" required>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions align="center">
+  <button mat-button (click)="onNoClick()">انصراف</button>
+  <button mat-button [mat-dialog-close]="{newSupply:data.newSupply}"
+          [disabled]="!f.valid" >تایید</button>
+</div>

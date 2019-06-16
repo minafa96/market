@@ -1,0 +1,24 @@
+
+.list {
+  direction: rtl;
+  margin: auto;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+table {
+  direction: rtl;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  text-align: right;
+}
+mat-form-field{
+  width:70%;
+  font-family: iransans, serif;
+}
+th,td{
+  font-family: iransans, serif;
+  direction: rtl;
+}

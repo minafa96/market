@@ -1,0 +1,27 @@
+<mat-toolbar role="heading" >
+
+
+  <span>
+    <nav mat-tab-nav-bar>
+
+      <a mat-tab-link
+         (click)="activeLink = 'list'"
+         [active]="activeLink == 'list'"
+         routerLink="/users/"
+         routerLinkActive="active"
+         style="text-decoration: none"
+      >لیست کاربران</a>
+
+      <a mat-tab-link
+         (click)="activeLink = 'Insert'"
+         [active]="activeLink == 'Insert'"
+         routerLink="/users/insert"
+         style="text-decoration: none"
+      >افزودن کاربر</a>
+
+    </nav>
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+

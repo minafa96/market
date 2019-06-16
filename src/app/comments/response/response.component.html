@@ -1,0 +1,14 @@
+
+<div mat-dialog-content>
+  <p>پاسخ را وارد نمایید</p>
+  <form #f="ngForm">
+  <mat-form-field>
+    <textarea matInput placeholder="پاسخ" [(ngModel)]="resp" name="response" required [matTextareaAutosize]></textarea>
+  </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions align="center">
+  <button mat-button (click)="onNoClick()">انصراف</button>
+  <button mat-button [mat-dialog-close]="{resp:data.resp}"
+  [disabled]="!f.valid" >تایید</button>
+</div>

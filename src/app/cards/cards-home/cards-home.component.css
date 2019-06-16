@@ -1,0 +1,9 @@
+a {
+  font-family: iransans, serif;
+}
+a :hover{
+  text-decoration: none;
+}
+span {
+  margin: auto;
+}
